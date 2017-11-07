@@ -3,6 +3,7 @@ package com.example.peter.snowresorts;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
@@ -26,7 +27,7 @@ public class SnowResortsActivity extends AppCompatActivity {
     public void getResort(View listItem){
         Resort resort = (Resort) listItem.getTag();
 
-        Intent i = new Intent(this, SnowResortsActivity.class);
+        Intent i = new Intent(this, ResortActivity.class);
 
         i.putExtra("rank", resort.getRank().toString());
         i.putExtra("country", resort.getCountry());
@@ -36,6 +37,5 @@ public class SnowResortsActivity extends AppCompatActivity {
 
         startActivity(i);
     }
-
 
 }

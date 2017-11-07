@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.peter.snowresorts.ResortActivity">
+
+    <ImageView
+        android:id="@+id/resort_image_view"
+        android:layout_width="418dp"
+        android:layout_height="221dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/meribel"
+        tools:layout_editor_absoluteX="-4dp" />
+
+    <TextView
+        android:id="@+id/rank_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/dark_gray2"
+        android:elevation="24dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:requiresFadingEdge="horizontal|vertical"
+        android:textColor="@android:color/background_light"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="rank" />
+
+    <TextView
+        android:id="@+id/resortName_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="245dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="resortName"
+        app:layout_constraintHorizontal_bias="0.029" />
+
+    <TextView
+        android:id="@+id/country_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="country"
+        app:layout_constraintBottom_toBottomOf="@+id/resortName_view"
+        android:layout_marginBottom="-8dp" />
+
+    <TextView
+        android:id="@+id/elevation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="64dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resortName_view"
+        tools:text="elevation" />
+
+    <TextView
+        android:id="@+id/lifts_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elevation_view"
+        tools:text="lifts" />
+
+    <ImageView
+        android:id="@+id/flag_view"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="-8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/resortName_view"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintLeft_toRightOf="@+id/resortName_view"
+        app:layout_constraintRight_toLeftOf="@+id/country_view"
+        app:srcCompat="@drawable/france" />
+
+</android.support.constraint.ConstraintLayout>
