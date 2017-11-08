@@ -13,6 +13,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import static android.R.attr.src;
+import static com.example.peter.snowresorts.R.id.flag_view;
+import static com.example.peter.snowresorts.R.layout.resort;
 
 
 /**
@@ -41,11 +43,11 @@ public class TopSnowResortsAdapter extends ArrayAdapter<Resort> {
         country.setText(currentResort.getCountry());
 
         ImageView resortImage = (ImageView) listItemView.findViewById(R.id.image_view);
-//        String image = currentResort.getImageSource();
-//        resortImage.setImageResource(R.drawable.meribel);
-//        Drawable.createFromPath("app/src/main/res/drawable/meribel.png");
-//        resortImage.setImageURI(Uri.parse("app/src/main/res/drawable/" + currentResort.getImageSource()));
-//        resortImage.setImageURI(Uri.parse("android.resource://com.example.peter.snowresorts/res/drawable/meribel.png"));
+        resortImage.setImageResource(currentResort.getImageSource());
+        resortImage.setContentDescription(currentResort.getResortName() + " Resort Image.");
+
+        ImageView countryFlag = (ImageView) listItemView.findViewById(flag_view);
+//        countryFlag.setContentDescription(currentResort.getCountry() + " Flag.");
 
         listItemView.setTag(currentResort);
 

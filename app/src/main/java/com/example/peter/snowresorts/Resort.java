@@ -11,9 +11,9 @@ public class Resort {
     private String country;
     private int elevation;
     private int lifts;
-    private String imageSource;
+    private int imageSource;
 
-    public Resort(Integer rank, String resortName, String country, Integer elevation, Integer lifts, String imageSource) {
+    public Resort(Integer rank, String resortName, String country, Integer elevation, Integer lifts, Integer imageSource) {
         this.rank = rank;
         this.resortName = resortName;
         this.country = country;
@@ -42,7 +42,7 @@ public class Resort {
         return this.lifts;
     }
 
-    public String getImageSource() {
+    public Integer getImageSource() {
         return imageSource;
     }
 }

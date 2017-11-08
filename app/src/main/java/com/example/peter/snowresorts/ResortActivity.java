@@ -3,17 +3,23 @@ package com.example.peter.snowresorts;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import static com.example.peter.snowresorts.R.layout.resort;
 
 public class ResortActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.resort);
+        setContentView(resort);
 
         Intent i = getIntent();
         Bundle extras = i.getExtras();
+
+        ImageView resortImage = (ImageView) findViewById(R.id.resort_image_view);
+        resortImage.setImageResource(extras.getInt("imageSource"));
 
         TextView rank = (TextView) findViewById(R.id.rank_view);
         rank.setText(extras.getString("rank"));

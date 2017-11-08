@@ -34,6 +34,7 @@ public class SnowResortsActivity extends AppCompatActivity {
         i.putExtra("resortName", resort.getResortName());
         i.putExtra("elevation", resort.getElevation().toString());
         i.putExtra("lifts", resort.getLifts().toString());
+        i.putExtra("imageSource", resort.getImageSource());
 
         startActivity(i);
     }
