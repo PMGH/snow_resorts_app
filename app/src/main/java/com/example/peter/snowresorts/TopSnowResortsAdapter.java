@@ -40,14 +40,11 @@ public class TopSnowResortsAdapter extends ArrayAdapter<Resort> {
         resortName.setText(currentResort.getResortName());
 
         TextView country = (TextView) listItemView.findViewById(R.id.country_text);
-        country.setText(currentResort.getCountry());
+        country.setText(currentResort.getCountry().getName());
 
         ImageView resortImage = (ImageView) listItemView.findViewById(R.id.image_view);
         resortImage.setImageResource(currentResort.getImageSource());
         resortImage.setContentDescription(currentResort.getResortName() + " Resort Image.");
-
-        ImageView countryFlag = (ImageView) listItemView.findViewById(flag_view);
-//        countryFlag.setContentDescription(currentResort.getCountry() + " Flag.");
 
         listItemView.setTag(currentResort);
 

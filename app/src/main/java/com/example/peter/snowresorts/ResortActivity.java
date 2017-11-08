@@ -27,6 +27,10 @@ public class ResortActivity extends AppCompatActivity {
         TextView country = (TextView) findViewById(R.id.country_view);
         country.setText(extras.getString("country"));
 
+        ImageView countryFlag = (ImageView) findViewById(R.id.flag_view);
+        countryFlag.setImageResource(extras.getInt("countryImage"));
+//        countryFlag.setContentDescription(currentResort.getCountry() + " Flag.");
+
         TextView resortName = (TextView) findViewById(R.id.resortName_view);
         resortName.setText(extras.getString("resortName"));
 

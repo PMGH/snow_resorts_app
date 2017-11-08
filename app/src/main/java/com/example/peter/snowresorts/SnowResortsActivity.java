@@ -30,7 +30,8 @@ public class SnowResortsActivity extends AppCompatActivity {
         Intent i = new Intent(this, ResortActivity.class);
 
         i.putExtra("rank", resort.getRank().toString());
-        i.putExtra("country", resort.getCountry());
+        i.putExtra("country", resort.getCountry().getName());
+        i.putExtra("countryImage", resort.getCountry().getImageSource());
         i.putExtra("resortName", resort.getResortName());
         i.putExtra("elevation", resort.getElevation().toString());
         i.putExtra("lifts", resort.getLifts().toString());
